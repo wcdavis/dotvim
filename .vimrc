@@ -14,8 +14,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Vim-airline statusline
-set laststatus=2    " always have a status line in a buffer
-set t_Co=256        " set 256 color mode
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts=1
 let g:airline_theme='dark'
@@ -24,8 +22,8 @@ let g:airline_theme='dark'
 Plugin 'tpope/vim-fugitive'
 
 " Nerdtree file explorer
-"Plugin 'scrooloose/nerdtree'
-"map <leader>n :NERDTreeToggle<CR>
+Plugin 'scrooloose/nerdtree'
+map <leader>n :NERDTreeToggle<CR>
 
 Plugin 'Shougo/unite.vim'
 let g:unite_split_rule = 'botright' " split on the bottom right
@@ -35,6 +33,12 @@ let g:unite_winheight = 10
 Plugin 'scrooloose/syntastic'
 let g:syntastic_auto_loc_list=1
 
+" Supertab code completion
+Plugin 'ervandew/supertab'
+map <Leader> <Plug>(easymotion-prefix)
+
+" Easymotion enhanced navigation
+Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
 filetype plugin indent on
 
@@ -47,8 +51,10 @@ set wildmenu        " present autocomplete options for commands
 set lazyredraw      " redraw only when necessary
 set showmatch       " highlight matching brackets
 set mouse=a         " enable mouse control
+set laststatus=2    " always have a status line in a buffer
 
 " Color and syntax
+set t_Co=256        " set 256 color mode
 syntax on           " syntax highlighting is on
 set background=dark " use dark background
 colorscheme molokai
@@ -61,6 +67,7 @@ set expandtab       " tabs are spaces
 " Searching
 set incsearch       " search as characters are typed
 set hlsearch        " highlight matches
+map <Leader>/ :noh<CR> " make search highlighting disappear
 
 " Split rules
 set splitright      " split to the right
