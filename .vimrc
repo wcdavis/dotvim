@@ -30,8 +30,6 @@ Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Ctags
-
 " Syntastic auto-linter
 Plugin 'scrooloose/syntastic'
 let g:syntastic_auto_loc_list=1
@@ -46,11 +44,11 @@ map <Leader> <Plug>(easymotion-prefix)
 " Easymotion enhanced navigation
 Plugin 'Lokaltog/vim-easymotion'
 
-" Tabularize alignment plugin
-Plugin 'godlygeek/tabular'
-
 " Jellybeans colorscheme
 Plugin 'nanotech/jellybeans.vim'
+
+" Git gutter
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
@@ -65,12 +63,11 @@ set lazyredraw                         " redraw only when necessary
 set showmatch                          " highlight matching brackets
 set mouse=a                            " enable mouse control
 set laststatus=2                       " always have a status line in a buffer
-set colorcolumn=81                     " highlight 80th character in a line
+set colorcolumn=72                     " highlight 80th character in a line
 
 " Color and syntax
 set t_Co=256                           " set 256 color mode
 syntax on                              " syntax highlighting is on
-set background=dark                    " use dark background
 colorscheme jellybeans
 
 " Spaces and Tabs
