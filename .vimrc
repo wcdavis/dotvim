@@ -63,7 +63,11 @@ set lazyredraw                         " redraw only when necessary
 set showmatch                          " highlight matching brackets
 set mouse=a                            " enable mouse control
 set laststatus=2                       " always have a status line in a buffer
-set colorcolumn=72                     " highlight 80th character in a line
+set colorcolumn=80                     " highlight 80th character in a line
+
+" Key remappings
+nnoremap ; :
+nnoremap : ;
 
 " Color and syntax
 set t_Co=256                           " set 256 color mode
